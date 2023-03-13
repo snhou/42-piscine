@@ -1,2 +1,7 @@
-# 42-piscine
-The Berlin Piscine March 2023
+# Exercise 00 : Z
+
+```
+?>cat z
+Z
+?>
+```
