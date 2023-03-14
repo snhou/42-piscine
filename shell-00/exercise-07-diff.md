@@ -16,4 +16,10 @@ the stolen plans that can save her people and restore freedom to the galaxy...$
 $
 ```
 
-[https://www.howtogeek.com/410532/how-to-compare-two-text-files-in-the-linux-terminal/](https://www.howtogeek.com/410532/how-to-compare-two-text-files-in-the-linux-terminal/)
+{% embed url="https://www.howtogeek.com/410532/how-to-compare-two-text-files-in-the-linux-terminal/" %}
+
+{% embed url="https://www.techtarget.com/searchdatacenter/tip/An-introduction-to-using-diff-and-patch-together" %}
+
+```
+patch file sw.diff -b
+```
