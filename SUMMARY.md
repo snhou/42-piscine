@@ -14,3 +14,8 @@
 * [Exercise 07 : diff](shell-00/exercise-07-diff.md)
 * [Exercise 08 : clean](shell-00/exercise-08-clean.md)
 * [Exercise 09 : Illusions, not tricks, Michael...](shell-00/exercise-09-illusions-not-tricks-michael....md)
+
+## C 00
+
+* [Exercise 00 : ft\_putchar](c-00/exercise-00-ft\_putchar.md)
+* [Exercise 01 : ft\_print\_alphabet](c-00/exercise-01-ft\_print\_alphabet.md)
