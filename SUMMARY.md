@@ -17,5 +17,13 @@
 
 ## C 00
 
+* [Prerequisute: write function](c-00/prerequisute-write-function.md)
 * [Exercise 00 : ft\_putchar](c-00/exercise-00-ft\_putchar.md)
 * [Exercise 01 : ft\_print\_alphabet](c-00/exercise-01-ft\_print\_alphabet.md)
+
+## C 01
+
+* [Prerequisute: Pointer](c-01/prerequisute-pointer.md)
+* [Exercise 00 : ft\_ft](c-01/exercise-00-ft\_ft.md)
+* [Exercise 01 : ft\_print\_alphabet](c-01/exercise-01-ft\_print\_alphabet.md)
+* [Exercise 07 : ft\_rev\_int\_tab](c-01/exercise-07-ft\_rev\_int\_tab.md)
