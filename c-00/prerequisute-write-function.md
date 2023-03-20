@@ -15,3 +15,7 @@ write(int fildes, const void *buf, size_t nbytes);
 | const void \*buf | A pointer to a buffer of at least nbytes bytes, which will be written to the file.                                                                                                                                                                                                     |
 | size\_t nbytes   | The number of bytes to write. If smaller than the provided buffer, the output is truncated.                                                                                                                                                                                            |
 | return value     | Returns the number of bytes that were written. If value is negative, then the system call returned an error.                                                                                                                                                                           |
+
+> [http://codewiki.wikidot.com/c:system-calls:write](http://codewiki.wikidot.com/c:system-calls:write)
+>
+> [https://www.quora.com/What-is-meant-by-a-and-a-in-the-C-language](https://www.quora.com/What-is-meant-by-a-and-a-in-the-C-language)
