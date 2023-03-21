@@ -27,3 +27,9 @@
 * [Exercise 00 : ft\_ft](c-01/exercise-00-ft\_ft.md)
 * [Exercise 01 : ft\_print\_alphabet](c-01/exercise-01-ft\_print\_alphabet.md)
 * [Exercise 07 : ft\_rev\_int\_tab](c-01/exercise-07-ft\_rev\_int\_tab.md)
+
+## C 02
+
+* [Prerequisute: char\[\] and Array](c-02/prerequisute-char-and-array.md)
+* [Exercise 00 : ft\_strcpy](c-02/exercise-00-ft\_strcpy.md)
+* [Exercise 01 : ft\_print\_alphabet](c-02/exercise-01-ft\_print\_alphabet.md)
