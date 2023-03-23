@@ -30,6 +30,7 @@
 
 ## C 02
 
+* [Difference Between Unsigned Int and Int](c-02/difference-between-unsigned-int-and-int.md)
 * [Prerequisute: char\[\] and Array](c-02/prerequisute-char-and-array.md)
 * [Exercise 00 : ft\_strcpy](c-02/exercise-00-ft\_strcpy.md)
 * [Exercise 01 : ft\_print\_alphabet](c-02/exercise-01-ft\_print\_alphabet.md)
