@@ -6,7 +6,7 @@
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 21:43:19 by shou              #+#    #+#             */
-/*   Updated: 2023/03/18 22:08:59 by shou             ###   ########.fr       */
+/*   Updated: 2023/03/20 18:41:03 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,20 +32,7 @@ void	ft_swap(int *a, int *b)
 //	y = 4;
 //	x_ptr = &x;
 //	y_ptr = &y;
-//	printf("%d", x);
-//	printf("%s", "\n");
-//	printf("%d", y);
-//	printf("%s", "\n");
-//	printf("%p", x_ptr);
-//	printf("%s", "\n");
-//	printf("%p", y_ptr);
-//	printf("%s", "\n");
+//	printf("%d\n%d\n%p\n%p\n", *x_ptr, *y_ptr, x_ptr, y_ptr);
 //	ft_swap(x_ptr, y_ptr);
-//	printf("%d", x);
-//	printf("%s", "\n");
-//	printf("%d", y);
-//	printf("%s", "\n");
-//	printf("%p", x_ptr);
-//	printf("%s", "\n");
-//	printf("%p", y_ptr);
+//	printf("%d\n%d\n%p\n%p\n", *x_ptr, *y_ptr, x_ptr, y_ptr);
 //}

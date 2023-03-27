@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   match_each_col_options.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/20 18:54:31 by shou              #+#    #+#             */
-/*   Updated: 2023/03/27 10:46:39 by shou             ###   ########.fr       */
+/*   Created: 2023/03/26 22:49:31 by cadenegr          #+#    #+#             */
+/*   Updated: 2023/03/27 16:27:04 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+int	*match_each_col_options(int col_options[6][4], int all_row_options[4][6][4],int col_pos, int row_pos, int row_arr, int out_arr[6][4])
 {
-	int	i;
+	int sw;
+	int *sw_ptr;
+	int i;
+	int k;
 
+	sw = 0;
 	i = 0;
-	while (src[i] != '\0')
+	k = 0;
+	sw_ptr = &sw;
+
+	while (i < 6)
 	{
-		dest[i] = src[i];
+		if (col_options[col_pos][row_arr] == all_row_options[row_arr][i][row_pos])
+		{
+			sw = 1;
+			while(k < 4)
+			{
+				out_arr[i][k] = all_row_options[row_arr][i][k];
+				k++;
+			}
+		}
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return sw_ptr;
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char	dest[] = "qweq";
-	char	src[] = "qweqqweq";
-
-	printf("%s\n", dest);
-	ft_strcpy(dest, src);
-	printf("%s\n", dest);
-	printf("%s\n", i);
-	return (0);
-}
-*/

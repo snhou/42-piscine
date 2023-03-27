@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/21 16:28:43 by shou              #+#    #+#             */
-/*   Updated: 2023/03/23 10:27:15 by shou             ###   ########.fr       */
+/*   Created: 2023/03/20 12:31:21 by shou              #+#    #+#             */
+/*   Updated: 2023/03/20 16:45:32 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
+#include <unistd.h>
+
+int	ft_strlen(char *str)
 {
-	while (*str != '\0')
+	int	idx;
+
+	idx = 0;
+	while (*(str + idx) != '\0')
 	{
-		if (*str < 32 || *str > 127)
-		{
-			return (0);
-		}
-		str++;
+		idx++;
 	}
-	return (1);
+	return (idx);
 }
 
-/*
-#include <stdio.h>
+//int	main(void)
+//{
+//	char	*str_ptr;
+//	int		nbr;
 
-int	main(void)
-{
-	printf("%d", ft_str_is_printable("qwe\n"));
-	return(0);
-}
-*/
+//	str_ptr = "qwerty";
+//	nbr = ft_strlen(str_ptr)+48;
+//	write(1, &nbr, 1);
+//	return (0);
+//}

@@ -1,34 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/21 16:28:43 by shou              #+#    #+#             */
-/*   Updated: 2023/03/23 10:27:15 by shou             ###   ########.fr       */
+/*   Created: 2023/03/21 16:38:15 by shou              #+#    #+#             */
+/*   Updated: 2023/03/23 16:19:02 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
+char	*ft_strupcase(char *str)
 {
-	while (*str != '\0')
+	int	idx;
+
+	idx = 0;
+	while (str[idx] != '\0')
 	{
-		if (*str < 32 || *str > 127)
+		if (str[idx] >= 97 && str[idx] <= 122)
 		{
-			return (0);
+			str[idx] = str[idx] - 32;
 		}
-		str++;
+		idx++;
 	}
-	return (1);
+	return (str);
 }
 
 /*
 #include <stdio.h>
 
-int	main(void)
+int	main(int n, char **argument_value)
 {
-	printf("%d", ft_str_is_printable("qwe\n"));
+	if (n==2)
+	{
+		printf("%s", ft_strupcase(argument_value[1]));
+	}
 	return(0);
 }
 */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   repeat_alpha.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
+/*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/14 14:55:21 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/14 14:59:21 by fwuensch         ###   ########.fr       */
+/*   Updated: 2023/03/24 11:17:15 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,5 @@ int		main(int ac, char **av)
 			av[1]++;
 		}
 	}
-	ft_putchar('\n');
+	write(1, "\n", 1);
 }

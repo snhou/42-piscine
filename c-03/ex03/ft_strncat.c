@@ -1,40 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/20 18:54:31 by shou              #+#    #+#             */
-/*   Updated: 2023/03/27 10:46:39 by shou             ###   ########.fr       */
+/*   Created: 2023/03/24 12:38:22 by shou              #+#    #+#             */
+/*   Updated: 2023/03/27 11:16:29 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
-	while (src[i] != '\0')
+	j = 0;
+	while (dest[j] != '\0')
+		j++;
+	while (src[i] != '\0' && i < nb)
 	{
-		dest[i] = src[i];
+		dest[j] = src[i];
 		i++;
+		j++;
 	}
-	dest[i] = '\0';
+	dest[j] = '\0';
 	return (dest);
 }
 
 /*
 #include <stdio.h>
-int	main(void)
-{
-	char	dest[] = "qweq";
-	char	src[] = "qweqqweq";
+#include <string.h>
 
-	printf("%s\n", dest);
-	ft_strcpy(dest, src);
-	printf("%s\n", dest);
-	printf("%s\n", i);
+int main() {
+	char dest[8] = "Hello, ";
+	char src[20] = "everyone";
+	char dest1[8] = "Hallo, ";
+	char src1[20] = "zusammen";
+	int num = 7;
+
+	printf("%s\n", ft_strncat(dest, src, num));
+	printf("%s\n", strncat(dest1, src1, num));
+	
 	return (0);
 }
 */

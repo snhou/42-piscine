@@ -1,34 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/21 16:28:43 by shou              #+#    #+#             */
-/*   Updated: 2023/03/23 10:27:15 by shou             ###   ########.fr       */
+/*   Created: 2023/03/24 12:37:53 by shou              #+#    #+#             */
+/*   Updated: 2023/03/27 11:14:40 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
+char	*ft_strcat(char *dest, char *src)
 {
-	while (*str != '\0')
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (dest[j])
+		j++;
+	while (src[i])
 	{
-		if (*str < 32 || *str > 127)
-		{
-			return (0);
-		}
-		str++;
+		dest[j] = src[i];
+		i++;
+		j++;
 	}
-	return (1);
+	dest[j] = '\0';
+	return (dest);
 }
 
 /*
 #include <stdio.h>
+#include <string.h>
 
-int	main(void)
-{
-	printf("%d", ft_str_is_printable("qwe\n"));
-	return(0);
+int main() {
+	char dest[8] = "Hello, ";
+	char src[20] = "everyone";
+	char dest1[8] = "Hallo, ";
+	char src1[20] = "zusammen";
+
+	printf("%s\n", ft_strcat(dest, src));
+	printf("%s\n", strcat(dest1, src1));
+	
+	return (0);
 }
 */

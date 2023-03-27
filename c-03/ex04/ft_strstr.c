@@ -1,34 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/21 16:28:43 by shou              #+#    #+#             */
-/*   Updated: 2023/03/23 10:27:15 by shou             ###   ########.fr       */
+/*   Created: 2023/03/24 12:38:31 by shou              #+#    #+#             */
+/*   Updated: 2023/03/27 11:31:32 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
+char	*ft_strstr(char *str, char *to_find)
 {
-	while (*str != '\0')
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	if (to_find[0] == '\0')
+		return (str);
+	while (str[i] != '\0')
 	{
-		if (*str < 32 || *str > 127)
-		{
-			return (0);
-		}
-		str++;
+		while (str[i + j] == to_find[j] && str[i + j] != '\0')
+			j++;
+		if (to_find[j] == '\0')
+			return (str + i);
+		i++;
+		j = 0;
 	}
-	return (1);
+	return (0);
 }
 
 /*
 #include <stdio.h>
+#include <string.h>
 
-int	main(void)
-{
-	printf("%d", ft_str_is_printable("qwe\n"));
-	return(0);
+int main() {
+	printf("%s\n", ft_strstr("Test ABC", "A"));
+	printf("%s\n", strstr("Test ABC", "B"));
+	return (0);
 }
 */

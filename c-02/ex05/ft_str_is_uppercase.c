@@ -6,33 +6,32 @@
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 16:22:19 by shou              #+#    #+#             */
-/*   Updated: 2023/03/21 16:27:10 by shou             ###   ########.fr       */
+/*   Updated: 2023/03/22 16:35:07 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_alpha(char *str)
+int	ft_str_is_uppercase(char *str)
 {
-	int		check_sw;
-
-	check_sw = 1;
 	while (*str != '\0')
 	{
 		if (*str > 'Z' || *str < 'A')
 		{
-			check_sw = 0;
+			return (0);
 		}
 		str++;
 	}
-	return (check_sw);
+	return (1);
 }
 
 /*
 #include <stdio.h>
-int	main(void)
-{
-	int	check;
 
-	check = ft_str_is_alpha("");
-	printf("%d", check);
+int	main(int n, char **argument_value)
+{
+	if (n==2)
+	{
+		printf("%d", ft_str_is_uppercase(argument_value[1]));
+	}
+	return(0);
 }
 */

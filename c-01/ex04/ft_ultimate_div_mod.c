@@ -6,7 +6,7 @@
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 13:20:31 by shou              #+#    #+#             */
-/*   Updated: 2023/03/19 14:40:17 by shou             ###   ########.fr       */
+/*   Updated: 2023/03/20 13:27:25 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,20 +32,7 @@ void	ft_ultimate_div_mod(int *a, int *b)
 //	y = 4;
 //	x_ptr = &x;
 //	y_ptr = &y;
-//	printf("%d", *x_ptr);
-//	printf("%s", "\n");
-//	printf("%d", *y_ptr);
-//	printf("%s", "\n");
-//	printf("%p", x_ptr);
-//	printf("%s", "\n");
-//	printf("%p", y_ptr);
-//	printf("%s", "\n");
+//	printf("%d\n%d\n%p\n%p\n", *x_ptr, *y_ptr, x_ptr, y_ptr);
 //	ft_ultimate_div_mod(x_ptr, y_ptr);
-//	printf("%d", *x_ptr);
-//	printf("%s", "\n");
-//	printf("%d", *y_ptr);
-//	printf("%s", "\n");
-//	printf("%p", x_ptr);
-//	printf("%s", "\n");
-//	printf("%p", y_ptr);
+//	printf("%d\n%d\n%p\n%p\n", *x_ptr, *y_ptr, x_ptr, y_ptr);
 //}

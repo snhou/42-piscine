@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/21 16:28:43 by shou              #+#    #+#             */
-/*   Updated: 2023/03/23 10:27:15 by shou             ###   ########.fr       */
+/*   Created: 2023/03/23 12:42:05 by shou              #+#    #+#             */
+/*   Updated: 2023/03/27 10:34:04 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	while (*str != '\0')
+	unsigned int	len;
+	unsigned int	count;
+
+	len = 0;
+	while (src[len])
+		len++;
+	count = 0;
+	if (size != 0)
 	{
-		if (*str < 32 || *str > 127)
+		while (count < (size - 1) && src[count])
 		{
-			return (0);
+			dest[count] = src[count];
+			count ++;
 		}
-		str++;
+		dest[count] = '\0';
 	}
-	return (1);
+	return (len);
 }
 
 /*
@@ -28,7 +36,14 @@ int	ft_str_is_printable(char *str)
 
 int	main(void)
 {
-	printf("%d", ft_str_is_printable("qwe\n"));
+	char	dest[] = "";
+	char	src[] = "shawnshawn";
+	int num;
+
+	printf("%s\n", dest);
+	num = ft_strlcpy(dest, src, 5);
+	printf("%s\n", dest);
+	printf("%d\n", num);
 	return(0);
 }
 */
