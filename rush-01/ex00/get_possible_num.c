@@ -6,7 +6,7 @@
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 17:18:53 by shou              #+#    #+#             */
-/*   Updated: 2023/03/27 18:34:05 by shou             ###   ########.fr       */
+/*   Updated: 2023/03/28 09:29:59 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	all_possible_val1(int s_all2d[9][7])
 	s_all2d[8][0] = ft_atoi("4100");
 }
 
-void	all_possible_val2(char s_all2d[9][7])
+void	all_possible_val2(int s_all2d[9][7])
 {
 	s_all2d[0][1] = ft_atoi("4123");
 	s_all2d[0][2] = ft_atoi("4213");
@@ -80,24 +80,47 @@ void	get_possible_num(int arr[2], int out_arr[6][4], int s_all2d[9][7])
 	int	i;
 	int	j;
 	int	k;
-	int	s_all3d[9][7][4];
 
-	//s_all2d => s_all3d
 	i = -1;
 	while (i++ < 9)
 	{
-		if (arr[0] == s_all3d[i][0][0] && arr[1] == s_all3d[i][0][1])
+		if (arr[1] * 1000 + arr[2] * 100 == s_all2d[i][0])
 		{
 			j = -1;
 			while (j++ < 7)
 			{
-				k = -1;
-				while (k++ < 4)
-					out_arr[j][k] = s_all3d[i][j + 1][k];
+				out_arr[j][k] = s_all2d[i][j + 1] / 1000;
+				out_arr[j][k + 1] = (s_all2d[i][j + 1] % 1000) / 100;
+				out_arr[j][k + 2] = (s_all2d[i][j + 1] % 100) / 10;
+				out_arr[j][k + 3] = s_all2d[i][j + 1] % 10;
 			}
 		}
 	}
 }
+
+//void	get_possible_num(int arr[2], int out_arr[6][4], int s_all2d[9][7])
+//{
+//	int	i;
+//	int	j;
+//	int	k;
+//	int	s_all3d[9][7][4];
+
+//	//s_all2d => s_all3d
+//	i = -1;
+//	while (i++ < 9)
+//	{
+//		if (arr[0] == s_all3d[i][0][0] && arr[1] == s_all3d[i][0][1])
+//		{
+//			j = -1;
+//			while (j++ < 7)
+//			{
+//				k = -1;
+//				while (k++ < 4)
+//					out_arr[j][k] = s_all3d[i][j + 1][k];
+//			}
+//		}
+//	}
+//}
 
 
 
@@ -107,15 +130,14 @@ void	get_possible_num(int arr[2], int out_arr[6][4], int s_all2d[9][7])
 
 int main()
  {
-	int	s_all[9][7][4];
+	int	s_all2d[9][7];
 
-	all_possible_val1(s_all);
-	all_possible_val2(s_all);
+	all_possible_val1(s_all2d);
+	all_possible_val2(s_all2d);
 
-	
  	int first_col[2] = {1,2};
  	int first_col_options[6][4] = {{9,9,9,9},{9,9,9,9},{9,9,9,9},{9,9,9,9},{9,9,9,9},{9,9,9,9}};
- 	get_possible_num(first_col,first_col_options);
+ 	get_possible_num(first_col,first_col_options,s_all2d);
  	int yyy = 0;
  	int yyyy = 0;
 
