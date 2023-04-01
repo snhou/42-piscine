@@ -6,7 +6,7 @@
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 11:22:59 by shou              #+#    #+#             */
-/*   Updated: 2023/03/31 11:30:00 by shou             ###   ########.fr       */
+/*   Updated: 2023/04/01 16:05:32 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,13 @@
 int	main(int argc, char **argv)
 {
 	int		i;
-	char	c;
 
 	i = 0;
 	if (argc == 1)
 	{
 		while (argv[0][i])
 		{
-			c = argv[0][i];
-			write(1, &c, 1);
+			write(1, &argv[0][i], 1);
 			i++;
 		}
 		write(1, "\n", 1);

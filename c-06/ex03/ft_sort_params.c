@@ -6,11 +6,11 @@
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 11:47:58 by shou              #+#    #+#             */
-/*   Updated: 2023/03/31 12:53:22 by shou             ###   ########.fr       */
+/*   Updated: 2023/04/01 16:33:08 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -28,37 +28,51 @@ int	ft_strcmp(char *s1, char *s2)
 	return (0);
 }
 
-void	swap_str(char **str1_ptr, char **str2_ptr)
+void	ft_swap_str(char **argv, int idx1, int idx2)
 {
 	char	*temp;
 
-	*temp = *str1_ptr;
-	*str1_ptr = *str2_ptr;
-	*str2_ptr = temp;
+	temp = argv[idx1];
+	argv[idx1] = argv[idx2];
+	argv[idx2] = temp;
+}
+
+void	ft_print_argv(char **argv, int j)
+{
+	int		k;
+
+	k = 0;
+	while (argv[j][k])
+	{
+		write(1, &argv[j][k], 1);
+		k++;
+	}
+	j++;
+	write(1, "\n", 1);
 }
 
 int	main(int argc, char **argv)
 {
 	int		step;
 	int		i;
+	int		j;
 
 	step = 0;
 	while (step < argc - 1)
 	{
-		i = 0;
+		i = 1;
 		while (i < argc - step -1)
 		{
-			if (ft_strcmp(argv[i], argv[i + 1]))
-			{
-				swap_str(&argv[i], &argv[i + 1]);
-			}
+			if (ft_strcmp(argv[i], argv[i + 1]) > 0)
+				ft_swap_str(argv, i, i + 1);
 			i++;
 		}
 		step++;
 	}
-
-	for (int x = 0; x < argc; ++x) {
-		printf("%s  ", argv[x]);
+	j = 1;
+	while (j < argc)
+	{
+		ft_print_argv(argv, j);
+		j++;
 	}
-	printf("\n");
 }

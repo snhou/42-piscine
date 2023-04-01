@@ -48,7 +48,7 @@ int	ft_atoi(char *str)
 	return (result);
 }
 
-
+/*
 #include <stdlib.h>
 #include <stdio.h>
 int main(void)
@@ -57,4 +57,4 @@ int main(void)
 	printf("%d\n", ft_atoi(s));
 	//printf("%d\n", atoi(s));
 }
-
+*/
