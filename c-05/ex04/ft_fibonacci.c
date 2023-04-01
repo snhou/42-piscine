@@ -6,11 +6,9 @@
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:45:04 by shou              #+#    #+#             */
-/*   Updated: 2023/03/30 17:45:14 by shou             ###   ########.fr       */
+/*   Updated: 2023/04/01 13:26:35 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_fibonacci(int index)
 {
@@ -26,6 +24,7 @@ int	ft_fibonacci(int index)
 	}
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
 	printf("%d", ft_fibonacci(6));

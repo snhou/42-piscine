@@ -6,7 +6,7 @@
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 16:34:40 by shou              #+#    #+#             */
-/*   Updated: 2023/03/31 10:50:10 by shou             ###   ########.fr       */
+/*   Updated: 2023/04/01 13:17:12 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,11 @@ int	ft_sqrt(int nb)
 	int	i;
 
 	i = 1;
-	while (i * i < nb)
-	{
+	while (i * i < nb && i < nb / 2)
 		i++;
-	}
 	if (i * i == nb)
 		return (i);
-	else
-		return (0);
+	return (0);
 }
 
 /*

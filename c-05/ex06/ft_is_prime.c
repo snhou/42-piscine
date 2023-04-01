@@ -6,7 +6,7 @@
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 10:50:49 by shou              #+#    #+#             */
-/*   Updated: 2023/03/31 11:01:48 by shou             ###   ########.fr       */
+/*   Updated: 2023/04/01 13:21:06 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@ int	ft_is_prime(int nb)
 	int	i;
 
 	i = 2;
+	if (nb <= 1)
+		return (0);
 	while (i < nb / 2)
 	{
 		if (nb % i == 0)
@@ -28,6 +30,6 @@ int	ft_is_prime(int nb)
 #include <stdio.h>
 int	main(void)
 {
-	printf("%d", ft_is_prime(3));
+	printf("%d", ft_is_prime(1));
 }
 */
