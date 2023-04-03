@@ -34,3 +34,10 @@
 * [Prerequisute: char\[\] and Array](c-02/prerequisute-char-and-array.md)
 * [Exercise 00 : ft\_strcpy](c-02/exercise-00-ft\_strcpy.md)
 * [Exercise 01 : ft\_print\_alphabet](c-02/exercise-01-ft\_print\_alphabet.md)
+
+## Rush 02
+
+* [Difference Between Unsigned Int and Int](rush-02/difference-between-unsigned-int-and-int.md)
+* [Prerequisute: typedef, Header files, Makefiles](rush-02/prerequisute-char-and-array.md)
+* [Exercise 00 : ft\_strcpy](rush-02/exercise-00-ft\_strcpy.md)
+* [Exercise 01 : ft\_print\_alphabet](rush-02/exercise-01-ft\_print\_alphabet.md)
