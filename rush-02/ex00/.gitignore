@@ -1,0 +1,4 @@
+*.o
+rush-02
+obj/
+main

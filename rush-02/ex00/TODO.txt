@@ -1,0 +1,2 @@
+Activate norminette in Makefile!!!
+Change .DEFAULT_GOAL in Makefile to 'all'
