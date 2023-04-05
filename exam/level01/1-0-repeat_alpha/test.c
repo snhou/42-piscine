@@ -1,58 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print.c                                         :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 20:14:11 by shou              #+#    #+#             */
-/*   Updated: 2023/04/05 10:08:02 by shou             ###   ########.fr       */
+/*   Created: 2023/04/05 16:07:53 by shou              #+#    #+#             */
+/*   Updated: 2023/04/05 16:27:53 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "BSQ.h"
+#include <unistd.h>
 
-void	ft_putchar(char c)
+int	repeat_cnt(char c)
 {
-	write(1, &c, 1);
+	if (c >= 'A' && c <= 'Z')
+		return (c - 'A' + 1);
+	else if (c >= 'a' && c <= 'z')
+		return (c - 'a' + 1);
+	else
+		return (1);
 }
 
-void	ft_putstr(char *str)
+int	main(int argc, char **argv)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	while (str[i] != '\0')
+	if (argc == 2)
 	{
-		ft_putchar(str[i]);
-		i++;
+		while (argv[1][i])
+		{
+			j = 0;
+			while (j < repeat_cnt(argv[1][i]))
+			{
+				write(1, &argv[1][i], 1);
+				j++;
+			}
+			i++;
+		}
 	}
-}
-
-void	ft_putnbr(int nb)
-{
-	int		i;
-	char	array[10];
-
-	i = 0;
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb = -nb;
-	}
-	if (nb == 0)
-	{
-		ft_putchar(48);
-	}
-	while (nb > 0)
-	{
-		array[i] = nb % 10;
-		i++;
-		nb /= 10;
-	}
-	while (i > 0)
-	{
-		i--;
-		ft_putchar(array[i] + 48);
-	}
+	write(1, "\n", 1);
+	return (0);
 }

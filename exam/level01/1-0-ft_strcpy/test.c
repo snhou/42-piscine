@@ -1,58 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print.c                                         :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 20:14:11 by shou              #+#    #+#             */
-/*   Updated: 2023/04/05 10:08:02 by shou             ###   ########.fr       */
+/*   Created: 2023/04/05 15:54:42 by shou              #+#    #+#             */
+/*   Updated: 2023/04/05 16:04:29 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "BSQ.h"
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void	ft_putstr(char *str)
+char	*ft_strcpy(char *s1, char *s2)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s2[i])
 	{
-		ft_putchar(str[i]);
+		s1[i] = s2[i];
 		i++;
 	}
+	s1[i] = 0;
+	return (s1);
 }
 
-void	ft_putnbr(int nb)
+#include <stdio.h>
+int	main(void)
 {
-	int		i;
-	char	array[10];
-
-	i = 0;
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb = -nb;
-	}
-	if (nb == 0)
-	{
-		ft_putchar(48);
-	}
-	while (nb > 0)
-	{
-		array[i] = nb % 10;
-		i++;
-		nb /= 10;
-	}
-	while (i > 0)
-	{
-		i--;
-		ft_putchar(array[i] + 48);
-	}
+	char s3[6] = "qwerty";
+	char s4[6] = "abc";
+	printf("%s",ft_strcpy(s4, s3));
 }

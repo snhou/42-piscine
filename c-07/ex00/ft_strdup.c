@@ -1,58 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print.c                                         :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 20:14:11 by shou              #+#    #+#             */
-/*   Updated: 2023/04/05 10:08:02 by shou             ###   ########.fr       */
+/*   Created: 2023/04/02 14:04:03 by shou              #+#    #+#             */
+/*   Updated: 2023/04/04 11:09:42 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "BSQ.h"
+#include <stdlib.h>
 
-void	ft_putchar(char c)
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
+	int	cur;
+
+	cur = 0;
+	while (str[cur] != 0)
+		cur++;
+	return (cur);
 }
 
-void	ft_putstr(char *str)
+char	*ft_strdup(char *src)
 {
-	int	i;
+	char	*dup;
+	int		cur;
 
-	i = 0;
-	while (str[i] != '\0')
+	dup = (char *)malloc(ft_strlen(src) + 1);
+	cur = 0;
+	while (src[cur] != 0)
 	{
-		ft_putchar(str[i]);
-		i++;
+		dup[cur] = src[cur];
+		cur++;
 	}
+	dup[cur] = 0;
+	return (dup);
 }
-
-void	ft_putnbr(int nb)
+/*
+#include <stdio.h>
+int	main(void)
 {
-	int		i;
-	char	array[10];
+	char	*str = "Hello";
+	char	*dup;
 
-	i = 0;
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb = -nb;
-	}
-	if (nb == 0)
-	{
-		ft_putchar(48);
-	}
-	while (nb > 0)
-	{
-		array[i] = nb % 10;
-		i++;
-		nb /= 10;
-	}
-	while (i > 0)
-	{
-		i--;
-		ft_putchar(array[i] + 48);
-	}
+	dup = ft_strdup(str);
+	printf("%s", dup);
 }
+*/

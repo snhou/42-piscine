@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_get_chars.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/05 10:07:26 by shou              #+#    #+#             */
+/*   Updated: 2023/04/05 10:07:55 by shou             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "BSQ.h"
 
-
-char            ft_get_char_void(char *argv)
+char	ft_get_char_void(char *argv)
 {
 	int		i;
 	char	*buf;
@@ -15,9 +26,9 @@ char            ft_get_char_void(char *argv)
 		return (0);
 	while (read(fd, &buf[i], 1))
 	{
-        if (buf[i] == '\n')
-            break ;
-        i++;
+		if (buf[i] == '\n')
+			break ;
+		i++;
 	}
 	v = buf[i - 3];
 	free (buf);

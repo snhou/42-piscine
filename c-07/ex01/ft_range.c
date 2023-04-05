@@ -1,58 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print.c                                         :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 20:14:11 by shou              #+#    #+#             */
-/*   Updated: 2023/04/05 10:08:02 by shou             ###   ########.fr       */
+/*   Created: 2023/04/03 12:16:47 by shou              #+#    #+#             */
+/*   Updated: 2023/04/04 11:16:21 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "BSQ.h"
+#include <stdlib.h>
 
-void	ft_putchar(char c)
+int	*ft_range(int min, int max)
 {
-	write(1, &c, 1);
-}
-
-void	ft_putstr(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
-}
-
-void	ft_putnbr(int nb)
-{
+	int		*buf;
 	int		i;
-	char	array[10];
 
+	if (min >= max)
+		return (0);
+	buf = (int *)malloc(sizeof(int) * (max - min));
+	if (!buf)
+		return (0);
 	i = 0;
-	if (nb < 0)
+	while (min < max)
 	{
-		ft_putchar('-');
-		nb = -nb;
-	}
-	if (nb == 0)
-	{
-		ft_putchar(48);
-	}
-	while (nb > 0)
-	{
-		array[i] = nb % 10;
+		buf[i] = min;
 		i++;
-		nb /= 10;
+		min++;
 	}
-	while (i > 0)
+	return (buf);
+}
+/*
+#include <stdio.h>
+int	main(void)
+{
+	int	max;
+	int	min;
+	int	*range;
+
+	max = 10;
+	min = 5;
+	range = ft_range(min, max);
+	for (int i = 0; i < (max-min);i++)
 	{
-		i--;
-		ft_putchar(array[i] + 48);
+		printf("%d, ", range[i]);
 	}
 }
+*/
