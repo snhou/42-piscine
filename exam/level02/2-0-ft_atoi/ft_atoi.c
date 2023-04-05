@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: angavrel <angavrel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: shou <shou@student.42berlin.de>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/19 18:34:45 by angavrel          #+#    #+#             */
-/*   Updated: 2017/07/14 15:59:14 by fwuensch         ###   ########.fr       */
+/*   Updated: 2023/04/05 18:09:52 by shou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ int		ft_atoi(char *s)
 	return (sign * (int)r);
 }
 
-int		main(void)//
-{//
-	char a[] = "    \n\n\v\f\r\t -5234AAAgreghrsth";// -5234
+int		main(void)
+{
+	char a[] = "    \n\n\v\f\r\t -++5234AAAgreghrsth";// -5234
 	printf("%d\n",ft_atoi(a));//
-}//
+}
